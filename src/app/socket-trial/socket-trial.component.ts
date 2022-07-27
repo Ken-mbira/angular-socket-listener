@@ -18,6 +18,7 @@ export class SocketTrialComponent implements OnInit {
   constructor() { 
     this.socketSubscription = this.subject.subscribe({
       next: (value:any) => {
+        this.currentWeight = value;
         console.log(value)
       },
       error: (error:any) => {
